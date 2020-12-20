@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan Card Application Form</title>
+    <link rel="stylesheet" href="panStyles.css">
+    <style>        
+    .noborder{
+            border:none;     
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <!--Header table-->
+        <table id="headerstyling" style="border: none;">
+            <th>
+                <strong>Request for PAN Card And/Or Correction Window</strong>
+                <br>
+                <i id="texttonormalfont">
+                    Fields marked with 
+                    <q1 class="texttored">*</q1>
+                    (asterisk) are mandatory. To avoid mistakes, please refer
+                    <a href="https://www.guvi.in/dashboard#" title="Guidelines" target="_blank">
+                        guidelines
+                    </a>
+                    and
+                    <a href="https://www.guvi.in" title="Instructions" target="_blank">
+                        instructions
+                    </a>
+                </i>
+            </th>
+        </table>
+    </header>
+
+    <section>
+        <!--Main table creation-->
+        <form method="GET"> 
+    
+            <table class="tableborder">
+                <tbody>
+
+                    <tr><td><b></b></td></tr> 
+
+                    <tr>
+                        <td>&nbsp;</td>           <!--add a data cell with borders-->
+                        <td colspan="4" width="100%">
+                            <b>
+                                <q1 class="texttored">*</q1>Whether citizen of India
+                            </b>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Yes<input type="radio" name = "PAN_YES" value="yes">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            No<input type="radio" name = "PAN_NO" value="no">                           
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td colspan="4" width="100%">
+                            <b>
+                                <q1 class="texttored">*</q1>Permanent Account Number (PAN)
+                            </b>
+                            <input type="text" maxlength="10">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" name="PAN_NAME_CHK" value="Y"></td>
+                        <td colspan="4" width="100%">
+                            <b><q1 class="texttored">*</q1>
+                                1. Name
+                            </b>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td colspan="4" width="100%">
+                            <b>Title &nbsp;&nbsp;&nbsp;</b>
+                            Shri/Mr<input type="radio" id="ttl1" name="PAN_TITLE_CHOICE" value="ttl1">
+                            &nbsp;&nbsp;&nbsp;
+                            Smt./Mrs<input type="radio" id="ttl2" name="PAN_TITLE_CHOICE" value="ttl2">
+                            &nbsp;&nbsp;&nbsp;
+                            Kumari/Ms<input type="radio" id="ttl3" name="PAN_TITLE_CHOICE" value="ttl3">
+                            &nbsp;&nbsp;&nbsp;
+                            <q1 style="color:gray">M/s</q1>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td width="35%">
+                            <!--for label (for===id) of input type text-->
+                            <b><label for="lastname">Last Name/Surname</label></b>
+                            <br>
+                            <input type="text" id="lastname" name="PAN_LASTNAME" maxlength="15">
+                        </td>
+
+                        <td width="35%">
+                            <b><label for="firstname">First Name</label></b>
+                            <br>
+                            <input type="text" id="firstname" name="PAN_FIRSTNAME" maxlength="15">
+                        </td>
+
+                        <td width="35%">
+                            <b><label for="middlename">Middle Name</label></b>
+                            <br>
+                            <input type="text" id="middlename" name="PAN_MIDDLE_NAME" maxlength="15">
+                        </td>
+                    </tr>
+                            
+                    <tr>
+                        <td></td>
+                        <td colspan="4" width="100%"><b>
+                            <label for="displayname" >
+                                <q1 class="texttored">*</q1>
+                                Name as you would like it to be printed on the card 
+                                <q1 style="color:lawngreen">(Prefix of title not allowed)</q1>
+                            </label>
+                            </b>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td colspan="4" width="100%">
+                            <input type="text" id="displayname" name="PAN_DISPLAYNAME" size = 40 maxlength="50">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td colspan="4" width="100%">
+                            <b>Details of Parents</b>
+                            <q1 style="color: lawngreen;">(Prefix of title not allowed)</q1>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td colspan="2">
+                            <b>Whether mother is single parent and you wish to apply 
+                                for PAN by furnishing the name of your mother only
+                            </b>
+                        </td>
+                        <td colspan="2">
+                            <label for="yes">Yes</label>
+                            <input type="radio" id="yes" name="PAN_YES" value="yes">
+                            
+                            <label for="no">No</label>
+                            <!--checked to select radio button by default-->
+                            <input type="radio" id="no" name="PAN_NO" value="no" checked>  
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="PAN_NAME_CHK" value="Y">
+                        </td>
+                        <td colspan="4">
+                            <b>
+                                <q1 class="texttored">*</q1>
+                                Father's Name
+                            </b>
+                            <q1 style="color: lawngreen;">(Mandatory field. Even married women should give father's name only.)</q1>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td width="35%">
+                            <b><label for="lastname">Last Name/Surname</label></b>
+                            <br>
+                            <input type="text" name="PAN_LASTNAME" id="lastname" maxlength="15">
+                        </td>
+                        <td width="35%">
+                            <b><label for="firstname">First Name</label></b>
+                            <br>
+                            <input type="text" name="PAN_FIRSTNAME" id="firstname" maxlength="15">
+                        </td>
+                        <td width="35%">
+                            <b><label for="middlename">Middle Name</label></b>
+                            <br>
+                            <input type="text" id="middlename" name="PAN_MIDDLE_NAME" maxlength="15">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="PAN_NAME_CHK" value="Y">
+                        </td>
+                        <td colspan="4">
+                            <b>
+                                <q1 class="texttored">*</q1>
+                                Mother's Name
+                            </b>
+                            <q1 style="color: lawngreen;">(This is an optional field.)</q1>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td width="35%">
+                            <b><label for="lastname">Last Name/Surname</label></b>
+                            <br>
+                            <input type="text" name="PAN_LASTNAME" id="lastname" maxlength="15">
+                        </td>
+                        <td width="35%">
+                            <b><label for="firstname">First Name</label></b>
+                            <br>
+                            <input type="text" name="PAN_FIRSTNAME" id="firstname" maxlength="15">
+                        </td>
+                        <td width="35%">
+                            <b><label for="middlename">Middle Name</label></b>
+                            <br>
+                            <input type="text" id="middlename" name="PAN_MIDDLE_NAME" maxlength="15">
+                        </td>
+                    </tr>
+
+                <div>
+                    <tr>
+                        <td></td>
+                        <td colspan="2">
+                            <b><q1 class="texttored">*</q1>
+                                4. Select Parent name which is to be printed on the card
+                            </b>
+                            <br>
+                            <q1 style="color: lawngreen;">(In case no option is provided then PAN 
+                                card will be issued with father's name)</q1>
+                        </td>
+                        <td>
+                            <label for="father">Father Name</label>
+                            <input type="radio" name="father" id="father" value="father" checked>
+                            <label for="mother">MotherName</label>
+                            <input type="radio" name="mother" id="mother">                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" name="PAN_DOB_CHK" id="dobcheck"></td>
+                        <td colspan="2">
+                            <b>
+                                <q1 class="texttored">*</q1>
+                                5. Date of Birth/Incorporation/Agreement/Partnership
+                                or Trust Deed/Formation of Body of Individuals/
+                                Association of Persons
+                            </b>
+                        </td>
+
+                        <td>
+                            <table cell-spacing="0" cell-padding="0" style="border:0" class="noborder">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label for="day">DD</label>
+                                        <br>
+                                        <select name="PAN_DOB_DAY" id="day">
+                                            <option value>DD</option>
+                                            <option value="01">1</option>
+                                            <option value="02">2</option>
+                                            <option value="03">3</option>
+                                            <option value="04">4</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label for="month">MM</label>
+                                        <br>
+                                        <select name="PAN_DOB_MONTH" id="month">
+                                            <option value>MM</option>
+                                            <option value="01">1</option>
+                                            <option value="02">2</option>
+                                            <option value="03">3</option>
+                                            <option value="04">4</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label for="year">YYYY</label>
+                                        <br>
+                                        <input type="text" name="year" id="year" size="5" placeholder="YYYY">
+                                    </td>
+                                </tr>  
+                            </tbody>
+                            </table>
+                        </td>                      
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" id="gender" name="PAN_GENDER"></td>
+                        <td colspan="2">
+                            <b>
+                                <q1 class="texttored">*</q1>
+                                6. Gender	
+                            </b>
+                        </td>
+                        <td>
+                            <label for="male">Male</label>
+                            <input type="radio" id="male" name="PAN_GENDER_MALE">
+                            <label for="female">Female</label>
+                            <input type="radio" id="female" name="PAN_GENDER_FEMALE">
+                            <label for="transgender">Transgender</label>
+                            <input type="radio" id="transgender" name="PAN_GENDER_TRANSGENDER">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" id="photomismatch" name="PAN_PHOTO_MISMATCH"></td>
+                        <td colspan="4"><b> 7. Photo Mismatch </b></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" id="signmismatch" name="PAN_SIGN_MISMATCH"></td>
+                        <td colspan="4"><b> 8. Signature Mismatch </b></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" id="addresscheck" name="PAN_ADDRESS_CHECK"></td>
+                        <td colspan="2">
+                            <b><q1 class="texttored">*</q1>
+                                9. Address for Communication
+                            </b>
+                        </td>
+                        <td>
+                            <label for="residential">Residential</label>
+                            <input type="radio" id="residential" name="PAN_ADDRESS_RESIDENTIAL">
+                            <label for="office">Office</label>
+                            <input type="radio" id="office" name="PAN_ADDRESS_OFFICE">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td colspan="2"><b>Office Name</b>
+                            <q style="font-style: italic;">(to be filled only in case of office address)</q>
+                        </td>
+                        <td><input type="text" id="officename" name="PAN_ADDRESS_OFFICENAME" maxlength="20" size="25"></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td colspan="2"><b>Flat/Door/Block No.</b></td>
+                        <td><input type="text" id="flatno" name="PAN_ADDRESS_FLATNO" maxlength="20" size="20"></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td colspan="2"><b>State/Union Territory</b></td>
+                        <td><select name="PAN_STATE_UNIONTERRITORY" id="stateutlist">
+                            <option value>--Please Select--</option>
+                            <option value="1">Karnataka</option>
+                            <option value="2">Tamil Nadu</option>
+                            <option value="3">Andhra Pradesh</option>
+                        </select></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td colspan="2"><b>Country</b></td>
+                        <td><select name="PAN_COUNTRY_LIST" id="countrylist" disabled>
+                            <option value>--Select Country--</option>
+                            <option value="IN">India</option>
+                            <option value="AUS">Australia</option>
+                            <option value="SL">Sri Lanka</option>
+                        </select></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" id="updateaddress" name="PAN_CHK_UPDATE_ADDRESS"></td>
+                        <td colspan="4"><b>10. If you desire to update your other address, give required details & 
+                            <q style="text-decoration: underline;">Submit proof of other address also.</q>
+                        </b></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" name="PAN_CHK_TELEPHONE"></td>
+                        <td colspan="2"><b><q1 class="texttored">*</q1>
+                            11. Telephone No.
+                        </b>
+                        <br>
+                        (Country code is compulsory)
+                        </td>
+
+                        <td>
+                            <table style="border: 1;" width="100%">
+                                <tbody style="font-size: xx-small; border-collapse: collapse;">
+                                    <tr>
+                                        <td width="100%" colspan="2" style="border-color: black; text-align: left;">
+                                            <q1 style="font-size: xx-small;">Country (ISD) COde</q1>
+                                            <br>
+                                            <select name="PAN_COUNTRIESLIST" id="countrylist">
+                                                <option value="-1">--Please Select--</option>
+                                                <option value="43">Afganistan (43)</option>
+                                                <option value="45">INdia (45)</option>
+                                                <option value="445">Bangladesh</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" ><input type="radio" name="PAN_MOBILENO" id="mobileno">Mobile No.</td>
+                                        <td colspan="1" ><input type="radio" name="PAN_TELEPHONENO" id="telephoneno">Telephone No.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100%" style="text-align: left;">Area/STD COde
+                                            <br>
+                                            <input type="text" maxlength="3" size="12">
+                                        </td>
+                                        <td width="100%" style="text-align: left;">Telephone No./Mobile No.
+                                            <br>
+                                            <input type="text" maxlength="10" size="12">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+
+                        <tr>
+                            <td><input type="radio" name="PAN_ONLINEPAYMENT" id="onlinepayment"></td>
+                            <td colspan="3"><b>Online Payment</b></td>
+
+                        </tr>
+                    </tr>
+
+                </div>
+                </tbody>
+            </table>            
+        </form>
+    </section>
+
+    For Paperless PAN Application:
+            <input type="radio" id="yes" value="Y" checked>Yes
+            <input type="radio" id="no" value="N">No
+            <br>
+            DSC<input type="radio" id="dsc" value="dsc">
+            <select name="PAN_USERTYPE" id="usertype" style="width:200px">
+                <option value>--Please Select--</option>
+                <option value="adult">Adult</option>
+                <option value="child">Child</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" style="color:blue">Guidelines to fill</a>
+            <br>
+            <table colspan="3" width="100%" style="border: none;">
+                <tbody>
+                    <tr>
+                        <td width="30%" style="text-align:left">Upload Photo</td>
+                        <td width="35%" style="text-align:left">
+                            <input type="file" name="PAN_UPLOAD_PHOTO" id="photo">
+                            &nbsp;
+                        </td>
+                        <td width="35%" style="text-align:left">Upload Signature
+                            &nbsp;<input type="file" name="PAN_UPLOAD_SIGNATURE" id="sign">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" style="text-align:left">Upload Documents</td>
+                        <td colspan="2" style="text-align:left">
+                            <input type="file" name="PAN_UPLOAD_DOCUMENT" id="document">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" colspan="3" style="text-align:left">
+                        <a href="" title="test" target="_blank">
+                            <img src="E:\VS Code Projects\Test Project\share_img.png" alt="ShareImg" 
+                               width="15" height="15">
+                            Fetch from Digilocker
+                        </a>
+                    </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="1">ALREADY UPLOADED PHOTO</td>
+                        <td colspan="2" style="text-align:left"><input type="text" size=30></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="1">ALREADY UPLOADED SIGNATURE</td>
+                        <td colspan="2" style="text-align:left"><input type="text" size=20></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="1">ALREADY UPLOADED DOCUMENT</td>
+                        <td colspan="2" style="text-align:left; "><input type="text" size=70 style="width: 200px; height:70px"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3" style="text-align:center">
+                            <input type="button" value="Submit" name="submit" size="10">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+</body>
+</html>
